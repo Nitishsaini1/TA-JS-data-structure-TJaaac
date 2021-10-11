@@ -61,9 +61,9 @@ alert(character[keyName]);
 console.log(character[42]);
 
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
-character. totalSeasons = "1 + 2 + 3 + 2";
+character. totalSeasons = 1 + 2 + 3 + 2;
 
 // - Access the value of the key `totalSeason` (it should be 8)
-console.log(character[totalSeasons]);
+console.log(character.totalSeasons);
 
 
