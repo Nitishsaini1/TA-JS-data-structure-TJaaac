@@ -95,7 +95,7 @@ console.log( movies[0].atitle === 'Hannah');
 for (let movie of movies ){
   for (let actor of movie.actors){
 
-    console.log(name[actors.length]);
+    console.log(movie.actor);
   }
 }
 // 26. Log the number of genres in all three movies one by one
