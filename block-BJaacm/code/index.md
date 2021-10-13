@@ -4,9 +4,9 @@ let user = {
   sibling: ['Robb', 'Ryan', 'John'],
 };
 let allBrothers = ['Robb', 'Ryan', 'John'];
-let brothersCopy = user.sibling;
-let usename = user.name;
-let newUser = user;
+let brothersCopy = user.sibling; //true
+let usename = user.name; //true
+let newUser = user; //true
 ```
 
 1. Memory representation
@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true because both are from same refrence
+- `user === newUser;` //  true because both are from same refrence
+- `user.name === newUser.name;` // true because both are from same address
+- `user.name == newUser.name;` //  true because both are from same address
+- `user.sibling == newUser.sibling;`//true because both are from same address
+- `user.sibling === newUser.sibling;` //true because both are from same address
+- `user.sibling == allBrothers;` //true because both are not from same address
+- `user.sibling === allBrothers;`//true because both are not from same address
+- `brothersCopy === allBrothers;`//true because both are not from same address
+- `brothersCopy == allBrothers;`//true because both are not from same address
+- `brothersCopy == user.sibling;`//true because both are from same address
+- `brothersCopy === user.sibling;` //true because both are from same address
+- `brothersCopy[0] === user.sibling[0];` //true both hve same value
+- `brothersCopy[1] === user.sibling[1];`//true both hve same value
+- `user.sibling[1] === newUser.sibling[1];`//true both hve same value
