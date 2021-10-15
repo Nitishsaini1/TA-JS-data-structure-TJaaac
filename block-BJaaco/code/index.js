@@ -25,9 +25,9 @@ console.log(evenCollection)
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
 
 let oddCollection =[];
-for(let num of collection) {
-  if(num % 2 != 0) {
-    oddCollection.push(num);    
+for(let number  of collection) {
+  if(number % 2 != 0) {
+    oddCollection.push(number);    
   }
 }
 console.log(oddCollection)
@@ -47,8 +47,14 @@ console.log(oddCollection)
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+function times(noOfTime, character = "test") {
+   if (noOfTime< 1) return[];
+
+  let final = []
+  for (let i=0; i<noOfTime; i++){
+    final.push(character)
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -96,6 +102,14 @@ function revert(arr) {
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
+function isUnWanted (value){
+  return 
+  value == false ||
+  value == null ||
+  value == "" ||
+  value == undefined ||
+  value == 0 
+}
 
 function clear(arr) {
   let final= [];
