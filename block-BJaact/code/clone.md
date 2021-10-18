@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output: Arya because it's stroring the second value.
+console.log(person.firstName); // output: Arya because it's stroring the second value.
+console.log(person.lastName); // output: Doe because it's stroring the second value.
+console.log(person == person2); // output: true becaue they does store same value
+console.log(person === person2); // output: true true becaue they does store same value
+console.log(person.lastName === person2.lastName); // output: true true becaue they does store same value
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output: John
+console.log(person.firstName); // output: Arya
+console.log(personTwo.lastName); // output: Doe
+console.log(person.firstName === personTwo.firstName); // output: false
+console.log(person == personTwo); // output: false
+console.log(person === personTwo); // output: false
+console.log(person.address === personTwo.address); // output: true
+console.log(person.address == personTwo.address); // output: true
+console.log(personTwo.address.city); // output: San Joe
+console.log(person.address.city); // output: San Joe
+console.log(person.address.city == personTwo.address.city); // output: true
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output: John
+console.log(person.firstName); // output: Arya
+console.log(personTwo.lastName); // output: Doe
+console.log(person.firstName === personTwo.firstName); // output: false
+console.log(person == personTwo); // output: false
+console.log(person === personTwo); // output: false
+console.log(person.address === personTwo.address); // output: false
+console.log(person.address == personTwo.address); // output: false
+console.log(personTwo.address.city); // output: San Jose
+console.log(person.address.city); // output: Sane Jose
+console.log(person.address.city == personTwo.address.city); // output: true
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,31 +104,12 @@ let blogs = [
 ];
 
 // Your code goes here
-```
-
-5. Clone the `question` variable into a new variable named `questionClone`
-
-```js
-var questions = [
-  {
-    prompt: 'Why is the sky blue?',
-    responses: [
-      'Because the color blue was on sale at Wallmart',
-      'Because blue is the prettiest color',
-      'Because the air molecules difract blue light more than any other color',
-    ],
-  },
-  {
-    prompt: 'Why are leaves usually green?',
-    responses: [
-      'So green caterpillars can hide better.',
-      'Because leaves can more easily make energy with green light',
-      "Because leaves absorb red and blue light so it's green that is reflected",
-    ],
-  },
-];
-
-// Your code goes here
+let clonedBlogs = [
+  { ...blogs[0] },
+   { ...blogs[1] },
+    { ...blogs[2] }
+     ];
+console.log(blogs[0] == clonedBlogs[0]); // false
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -189,13 +170,16 @@ let person = [
 ];
 
 // Your code goes here
+let clonedPerson = [...person];
+console.log(clonedPerson);
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
+function cloneObject(obj) {
   // your code
+  return {...obj};
 }
 
 // Run the test below to check your function
@@ -225,9 +209,11 @@ console.log(
     user == cloned ? `not clone` : `cloned successfully 😁👑`
   }`
 );
+
 console.log(
   `The person object is ${
     person == clonedPerson ? `not clone` : `cloned successfully 😁👑`
   }`
 );
+
 ```
